@@ -1,4 +1,3 @@
-
 mysql> SELECT personid, personname, count(distinct competitions.countryid) AS gts 
 FROM results, competitions 
 WHERE roundtypeid IN ('c', 'f') 
