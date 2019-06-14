@@ -1,8 +1,9 @@
-mysql> SELECT personid, personname, count(distinct competitions.countryid) AS gts 
+mysql> SELECT personid, personname, COUNT(DISTINCT competitions.countryid) AS gts 
 FROM results, competitions 
 WHERE roundtypeid IN ('c', 'f') 
 AND eventid='333' 
-AND personcountryid='USA' and pos=1 
+AND personcountryid='USA' 
+AND pos=1 
 AND competitions.id=results.competitionid 
 GROUP BY personname 
 HAVING gts>1 
