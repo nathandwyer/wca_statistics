@@ -1,3 +1,5 @@
+-- Americans who have won competitions (considered as 3x3x3 here) in the most different countries
+
 mysql> SELECT personid, personname, COUNT(DISTINCT competitions.countryid) AS gts 
 FROM results, competitions 
 WHERE roundtypeid IN ('c', 'f') 
